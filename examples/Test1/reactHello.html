@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Test 1</title>
+   
+  </head>
+  <body>
+    <div id="div1">aaa</div>
+
+    <script src="../shared/thirdparty/es5-shim.min.js"></script>
+    <script src="../shared/thirdparty/es5-sham.min.js"></script>
+    <script src="../shared/thirdparty/console-polyfill.js"></script>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/JSXTransformer.js"></script>
+
+    <script type="text/jsx">
+
+    var Hello = React.createClass({
+        render: function() {
+          return(<div> Hi {this.props.name}</div>);
+        }
+
+    }); 
+
+    React.render(<Hello name="Nutan"/>,document.getElementById("div1"));                                          
+
+    </script>
+  </body>
+</html>

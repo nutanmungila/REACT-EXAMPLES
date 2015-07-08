@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Test 3</title>
+   
+  </head>
+  <body>
+    <div id="div1">aaaaaaaaaaaaaaaaaa</div>
+
+    <script src="../shared/thirdparty/es5-shim.min.js"></script>
+    <script src="../shared/thirdparty/es5-sham.min.js"></script>
+    <script src="../shared/thirdparty/console-polyfill.js"></script>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/JSXTransformer.js"></script>
+
+    <script type="text/jsx">
+
+    <div id ="div1">AAAA</div>
+
+
+    var TimeCount = React.createClass({
+
+        
+
+
+
+        render:function() {
+
+            var valSec = Math.round(this.props.timeVal  / 1000);
+
+            return(
+
+                 <p> Program isss running from: {valSec} seconds</p>
+
+                );
+
+            }
+
+
+
+    });
+    
+     var start = new Date().getTime();
+
+     setInterval(function() {
+          React.render( <TimeCount timeVal={new Date().getTime() - start}  /> , document.getElementById("div1") );
+     },50);
+
+    
+                               
+
+    </script>
+  </body>
+</html>
